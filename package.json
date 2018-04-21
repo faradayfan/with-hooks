@@ -1,0 +1,38 @@
+{
+  "name": "with-hooks",
+  "version": "1.0.0",
+  "description": "Add hooks to class methods.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^5.1.1"
+  },
+  "scripts": {
+    "test": "mocha --require ./scripts/mocha-bootload test/**/*.test.js"
+  },
+  "keywords": [
+    "hook",
+    "hooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faradayfan/with-hooks.git"
+  },
+  "author": {
+    "name": "John Miller",
+    "email": "ctrjohnnie@gmail.com",
+    "url": "http://github.com/faradayfan"
+  },
+  "license": "MIT"
+}
