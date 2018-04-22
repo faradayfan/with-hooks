@@ -10,10 +10,10 @@ describe('withHooks', () => {
       handlerCalled = false;
       hooksConfig = {
         greeting: {
-          type: 'pre',
-          func: () => {
-            handlerCalled = true
-            console.log('pre hook called')
+          pre: {
+            func: () => {
+              handlerCalled = true
+            }
           }
         }
       }
@@ -33,6 +33,8 @@ describe('withHooks', () => {
         expect(Person.prototype instanceof WrappedPerson).to.be.false
         expect(WrappedPerson.prototype instanceof Person).to.be.true
       })
+
+      it('the wrapped function should be apart of the prototype')
 
       describe('when the class is instantiated', () => {
         let spec

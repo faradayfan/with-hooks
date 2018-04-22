@@ -4,8 +4,14 @@ module.exports = class EventMapper {
   constructor(events = {}) {
     this.emitter = new EventEmitter()
     Object.keys(events).forEach((k) => {
-      this.emitter.on(k, events[k].func);
-      this[k] = (...args) => { this.emitter.emit(k, ...args) }
+      if (events[k].pre) {
+        this.emitter.on(`${k}:pre`, events[k].pre.func)
+        this[`${k}:pre`] = (...args) => { this.emitter.emit(`${k}:pre`, ...args) }
+      }
+      if (events[k].post) {
+        this.emitter.on(`${k}:post`, events[k].post.func);
+        this[`${k}:post`] = (...args) => { this.emitter.emit(`${k}:post`, ...args) }
+      }
     })
   }
 }
