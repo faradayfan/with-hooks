@@ -29,10 +29,6 @@
     "type": "git",
     "url": "https://github.com/faradayfan/with-hooks.git"
   },
-  "author": {
-    "name": "John Miller",
-    "email": "ctrjohnnie@gmail.com",
-    "url": "http://github.com/faradayfan"
-  },
+  "author": "John Miller <ctrjohnnie@gmail.com> (http://github.com/faradayfan)",
   "license": "MIT"
 }
