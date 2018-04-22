@@ -1,6 +1,6 @@
 {
   "name": "with-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add hooks to class methods.",
   "main": "index.js",
   "directories": {
