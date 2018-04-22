@@ -1,6 +1,12 @@
 ## with-hooks
 
+
+
 This is a simple package that allows you to add hooks to class prototype methods. 
+
+### Installation
+
+`npm install with-hooks --save`
 
 ### Usage
 
@@ -49,3 +55,6 @@ Now when `getGreeting` is invoked, the functions you defined in the configuratio
 ``` javascript
 garfield.getGreeting('Dave')
 ```
+
+
+[npm page](https://www.npmjs.com/package/with-hooks)
