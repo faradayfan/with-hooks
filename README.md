@@ -17,11 +17,11 @@ class Cat {
 }
 ```
 
-Define the with-hooks configuration 
+Define the with-hooks config object
 ```javascript
 let config = {
-  getGreeting: {
-    pre: {
+  getGreeting: { // this name matches name of function
+    pre: { 
       func: (...args) => {
         console.log(`getGreeting pre hook: ${args}`)
       }
@@ -35,7 +35,7 @@ let config = {
 }
 ```
 
-Wrap the Cat class with the hooks
+Wrap the `Cat` class with the hooks
 ```javascript
 const CatWithHooks = withHooks(config)(Cat)
 ```
@@ -45,7 +45,7 @@ Instantiate a `CatWithHooks` object
 let garfield = new CatWithHooks('Garfield')
 ```
 
-Now when getGreeting is invoked, the functions you defined in the configuration object will be called.
+Now when `getGreeting` is invoked, the functions you defined in the configuration object will be called.
 ``` javascript
 garfield.getGreeting('Dave')
 ```
